@@ -37,6 +37,8 @@ public class WildcardPECS {
         // catList.add(new Cat()) //Ошибка
         // catList.add(new HomeCat("f")); //Ошибка
 
+        Cat item = catList.get(0);
+
         catList.forEach(cat -> logger.info("Myau:{}", cat.getMyau()));
     }
 
