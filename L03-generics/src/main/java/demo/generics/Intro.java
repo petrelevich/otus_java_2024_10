@@ -26,11 +26,33 @@ public class Intro {
         for (Object item : list) { // Object !!!
             logger.info("{}", item);
         }
+
+        double sum = sum(list);
+        logger.info("sum = {}", sum);
+    }
+
+    double sum(List list) {
+        var result = 0.0;
+        for (Object item : list) {
+         // Не компилируется:
+         //      result += item;
+         // Ошибка в runtime (ClassCastException):
+         //      result += (double) item;
+         // Надо делать проверки и преобразование типов:
+         //      if (item != null && item instanceof Number) {
+         //          result += Double.parseDouble(item.toString());
+         //      } else {
+         //          // Бросаем исключение или игнорируем
+         //      }
+        }
+        return result;
     }
 
     // Эра Generics
     private void generics() {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list2 = new ArrayList<>();
+        var list3 = new ArrayList<Integer>();
         list.add(4);
         //        list.add(4.0); //ошибка компиляции
         //        list.add(4L);    //ошибка компиляции

@@ -29,6 +29,7 @@ public class Wildcard1 {
         printWild(catList);
     }
 
+    // Нельзя передать сюда List<Cat>
     private static void print(List<Animal> animalList) {
         animalList.forEach(animal -> logger.info("{}", animal));
     }

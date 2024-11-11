@@ -15,6 +15,8 @@ public class GenericsClass<K, V> {
         genericsClass.putVal(1, "data1");
         genericsClass.putVal(2, "data2");
         genericsClass.putVal(3, "data3");
+        // Ошибка компиляции:
+        // genericsClass.putVal("4", "data4");
 
         genericsClass.print();
 
