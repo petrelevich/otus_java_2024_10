@@ -5,7 +5,7 @@ import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings({"rawtypes", "unchecked"})
+@SuppressWarnings({"rawtypes", "unchecked", "java:S125", "java:S1854", "java:S1481", "java:S2293"})
 public class Intro {
     private static final Logger logger = LoggerFactory.getLogger(Intro.class);
 
@@ -34,16 +34,16 @@ public class Intro {
     double sum(List list) {
         var result = 0.0;
         for (Object item : list) {
-         // Не компилируется:
-         //      result += item;
-         // Ошибка в runtime (ClassCastException):
-         //      result += (double) item;
-         // Надо делать проверки и преобразование типов:
-         //      if (item != null && item instanceof Number) {
-         //          result += Double.parseDouble(item.toString());
-         //      } else {
-         //          // Бросаем исключение или игнорируем
-         //      }
+            // Не компилируется:
+            //      result += item;
+            // Ошибка в runtime (ClassCastException):
+            //      result += (double) item;
+            // Надо делать проверки и преобразование типов:
+            //      if (item != null && item instanceof Number) {
+            //          result += Double.parseDouble(item.toString());
+            //      } else {
+            //          // Бросаем исключение или игнорируем
+            //      }
         }
         return result;
     }
