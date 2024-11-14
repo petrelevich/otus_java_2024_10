@@ -3,6 +3,7 @@ package demo.generics;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("java:S125")
 public class GenericsMethod {
     private static final Logger logger = LoggerFactory.getLogger(GenericsMethod.class);
 

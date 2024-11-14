@@ -8,6 +8,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings({"java:S1854", "java:S1481"})
 public class WildcardPECS {
     private static final Logger logger = LoggerFactory.getLogger(WildcardPECS.class);
 

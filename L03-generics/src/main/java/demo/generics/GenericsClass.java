@@ -5,6 +5,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("java:S125")
 public class GenericsClass<K, V> {
     private static final Logger logger = LoggerFactory.getLogger(GenericsClass.class);
 
