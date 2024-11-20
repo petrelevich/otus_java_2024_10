@@ -20,14 +20,12 @@ public class ReflectionGetInfo {
         // Публичные методы, включая наследованные
         Method[] methodsPublic = clazz.getMethods();
         System.out.println("--- public methods:");
-        Arrays.stream(methodsPublic)
-                .forEach(method -> System.out.println(method.getName()));
+        Arrays.stream(methodsPublic).forEach(method -> System.out.println(method.getName()));
 
         // Методы, объявленные в классе, включая приватные
         Method[] methodsAll = clazz.getDeclaredMethods();
         System.out.println("--- all methods:");
-        Arrays.stream(methodsAll)
-                .forEach(method -> System.out.println(method.getName()));
+        Arrays.stream(methodsAll).forEach(method -> System.out.println(method.getName()));
 
         // Публичные поля, включая наследованные
         System.out.println("--- public fields:");

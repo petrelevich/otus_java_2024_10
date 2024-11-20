@@ -7,8 +7,7 @@ public class DemoClass {
 
     private String valuePrivate = "initValue";
 
-    public DemoClass() {
-    }
+    public DemoClass() {}
 
     public DemoClass(String valuePrivate) {
         this.valuePrivate = valuePrivate;
