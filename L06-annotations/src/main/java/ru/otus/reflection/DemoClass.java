@@ -7,7 +7,15 @@ public class DemoClass {
 
     private String valuePrivate = "initValue";
 
+    public DemoClass() {
+    }
+
     public DemoClass(String valuePrivate) {
+        this.valuePrivate = valuePrivate;
+    }
+
+    public DemoClass(int publicFieldForDemo, String valuePrivate) {
+        this.publicFieldForDemo = publicFieldForDemo;
         this.valuePrivate = valuePrivate;
     }
 
