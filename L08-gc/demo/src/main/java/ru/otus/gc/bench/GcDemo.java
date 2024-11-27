@@ -25,7 +25,8 @@ VM options:
 -XX:+UseG1GC
 -XX:MaxGCPauseMillis=10
 */
-// UseZGC
+// -XX:+UseZGC
+// -XX:+ZGenerational
 
 /*
 Основная настройка:
