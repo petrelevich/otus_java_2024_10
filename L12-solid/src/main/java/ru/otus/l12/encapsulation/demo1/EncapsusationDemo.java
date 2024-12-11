@@ -28,6 +28,22 @@ public class EncapsusationDemo {
         String companyName2 = employee.getDepartment().getCompany().getName();
         // см. ниже
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // В идеале так
         String companyName3 = employee.getCompanyName();
         // Закон Деметры
@@ -43,8 +59,7 @@ public class EncapsusationDemo {
         depart.company = company;
         departments.add(depart);
 
-        departments.add(new Department()); //
-        // company != company.getDepartments().get( 1 ).getCompany()
+        departments.add(new Department());
 
         // Вроде подразделения добавились, их два
         logger.info(
@@ -57,6 +72,18 @@ public class EncapsusationDemo {
         // Будут предложения как улучшить код,
         // чтобы избежать подобных ситуаций?
         // см. код ниже ...
+
+
+
+
+
+
+
+
+
+
+
+
 
         company.addDepartment(depart);
         // company.removeDepartment(depart);
