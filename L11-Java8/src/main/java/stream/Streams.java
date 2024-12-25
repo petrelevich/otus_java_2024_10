@@ -59,10 +59,7 @@ public class Streams {
         logger.info("filterMapReduce");
         var list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
         int result =
-                list.stream()
-                        .filter(val -> val % 2 > 0)
-                        .map(val -> val * 10)
-                        .reduce(0, Integer::sum);
+                list.stream().filter(val -> val % 2 > 0).map(val -> val * 10).reduce(0, Integer::sum);
         logger.info("result:{}", result);
     }
 
@@ -97,9 +94,7 @@ public class Streams {
     }
 
     public static void streamNotStarted() {
-        var dataStream = Stream.of(1, 2, 3, 4, 5)
-                .map(val -> val * 10)
-                .peek(val -> logger.info("{}", val));
+        var dataStream = Stream.of(1, 2, 3, 4, 5).map(val -> val * 10).peek(val -> logger.info("{}", val));
         // .forEach(System.out::println);
 
         dataStream.forEach(val -> logger.info("{}", val));

@@ -83,6 +83,6 @@ public class MonadExample {
 
     // так лучше
     private String good(String str) {
-        return str == null ? "param is NULL_good" :str.toUpperCase();
+        return str == null ? "param is NULL_good" : str.toUpperCase();
     }
 }
