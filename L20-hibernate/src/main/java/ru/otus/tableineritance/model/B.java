@@ -2,10 +2,8 @@ package ru.otus.tableineritance.model;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "B")
 @DiscriminatorValue("BLeaf")
 public class B extends A {
     private String fieldB;

@@ -34,7 +34,7 @@ public class InheritanceDemo {
                 logger.info("\n\n-------------------------------------------\n\n");
                 logger.info("Загружаем все сущности A (в т.ч. наследников):");
                 session.getTransaction().begin();
-                TypedQuery<A> query = session.createQuery("select fieldA from A a", A.class);
+                TypedQuery<A> query = session.createQuery("select a from A a", A.class);
                 List<A> resultList = query.getResultList();
 
                 logger.info("\n\nРезультат:{}", resultList);
