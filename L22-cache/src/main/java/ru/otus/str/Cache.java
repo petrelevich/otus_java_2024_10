@@ -30,7 +30,7 @@ public class Cache {
     private void go() {
         final Data d1 = dataStore.get("k1");
         DataProcessor.process(d1);
-        final Data d12 = dataStore.get("k2"); // Обратите внимение, что ключ другой
+        final Data d12 = dataStore.get("k2"); // Обратите внимание, что ключ другой
         logger.info("key:{}, values: {}", d12.getId(), d12.getValues());
     }
 }
