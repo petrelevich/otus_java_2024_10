@@ -3,6 +3,7 @@ package ru.otus.core.repository;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Optional;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.otus.base.AbstractHibernateTest;
@@ -12,6 +13,7 @@ import ru.otus.crm.model.Client;
 class DataTemplateHibernateTest extends AbstractHibernateTest {
 
     @Test
+    @Disabled("Удалить при выполнении ДЗ")
     @DisplayName(" корректно сохраняет, изменяет и загружает клиента по заданному id")
     void shouldSaveAndFindCorrectClientById() {
         // given

@@ -20,6 +20,7 @@ include("L11-Java8")
 
 include("L12-solid")
 include("L13-creationalPatterns")
+include("L14-behavioralPatterns")
 include("L15-structuralPatterns:demo")
 include("L15-structuralPatterns:homework")
 
@@ -37,6 +38,11 @@ include("L21-jpql:class-demo")
 include("L21-jpql:homework-template")
 
 include("L22-cache")
+include("L23-redis:counter")
+include("L23-redis:data-source")
+include("L23-redis:data-transformer")
+include("L23-redis:data-listener")
+
 
 include ("L24-webServer")
 

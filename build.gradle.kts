@@ -36,6 +36,8 @@ allprojects {
     val guava: String by project
     val jmh: String by project
     val asm: String by project
+    val jsr305: String by project
+    val redisson: String by project
     val glassfishJson: String by project
 
     val jetty: String by project
@@ -54,6 +56,9 @@ allprojects {
             dependency("org.openjdk.jmh:jmh-generator-annprocess:$jmh")
             dependency("org.glassfish:jakarta.json:$glassfishJson")
             dependency("org.ow2.asm:asm-commons:$asm")
+
+            dependency("com.google.code.findbugs:jsr305:$jsr305")
+            dependency("org.redisson:redisson:$redisson")
 
             dependency("org.eclipse.jetty.ee10:jetty-ee10-servlet:$jetty")
             dependency("org.eclipse.jetty:jetty-server:$jetty")
