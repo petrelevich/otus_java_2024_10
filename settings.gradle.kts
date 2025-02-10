@@ -43,8 +43,10 @@ include("L23-redis:data-source")
 include("L23-redis:data-transformer")
 include("L23-redis:data-listener")
 
-
 include ("L24-webServer")
+
+include ("L25-di:class-demo")
+include ("L25-di:homework-template")
 
 pluginManagement {
     val jgitver: String by settings
