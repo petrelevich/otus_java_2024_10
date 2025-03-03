@@ -47,19 +47,19 @@ public class ThreadMethodDemo {
         } catch (InterruptedException e) {
             // InterruptedException сдрасывает флаг isInterrupted()
             logger.info(
-                    "somebody is trying to stop us, Ok, 1 interrupt = {}",
+                    "somebody is trying to stop us, Ok, 1 isInterrupted = {}",
                     Thread.currentThread().isInterrupted());
             logger.info(
-                    "somebody is trying to stop us, Ok, 2 interrupt = {}",
+                    "somebody is trying to stop us, Ok, 2 isInterrupted = {}",
                     Thread.currentThread().isInterrupted());
             // восстанавливаем флаг isInterrupted()
             Thread.currentThread().interrupt();
             logger.info(
-                    "somebody is trying to stop us, Ok, 3 interrupt = {}",
+                    "somebody is trying to stop us, Ok, 3 isInterrupted = {}",
                     Thread.currentThread().isInterrupted());
             sleep();
             logger.info(
-                    "somebody is trying to stop us, Ok, 4 interrupt = {}",
+                    "somebody is trying to stop us, Ok, 4 isInterrupted = {}",
                     Thread.currentThread().isInterrupted());
             return true;
         }
