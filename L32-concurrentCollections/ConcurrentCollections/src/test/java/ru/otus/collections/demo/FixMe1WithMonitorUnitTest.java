@@ -1,7 +1,7 @@
 package ru.otus.collections.demo;
 
 import static java.lang.System.out;
-import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
+import static org.apache.commons.lang3.RandomStringUtils.secure;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ class FixMe1WithMonitorUnitTest {
                 latch.await();
                 for (int i = 0; i < ITERATIONS_COUNT; i++) {
                     log.info("starting adding email {}", i);
-                    list.add(randomAlphabetic(10) + "@gmail.com");
+                    list.add(secure().nextAlphabetic(10) + "@gmail.com");
                     log.info("finishing adding email {}", i);
                 }
             } catch (Exception ex) {
