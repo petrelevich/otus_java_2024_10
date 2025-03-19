@@ -30,7 +30,7 @@ public class ProcessRunner {
         // printProcessesList();
     }
 
-    // Для Windows (VM Options): -Dfile.encoding=win-1251
+    // Для Windows (VM Options): -Dfile.encoding=cp1251
     private static void simpleJobExecution() throws Exception {
         System.out.println("begin");
 
