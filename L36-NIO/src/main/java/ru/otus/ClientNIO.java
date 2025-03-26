@@ -33,7 +33,7 @@ public class ClientNIO {
                 socketChannel.connect(new InetSocketAddress(HOST, PORT));
 
                 logger.info("connecting to server");
-                while (!socketChannel.finishConnect()) {
+                if (socketChannel.finishConnect()) {
                     logger.info("connection established");
                 }
                 send(socketChannel, request);
