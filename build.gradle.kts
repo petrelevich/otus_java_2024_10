@@ -51,6 +51,8 @@ allprojects {
     val springDocOpenapiUi: String by project
 
     val grpc: String by project
+    val wiremock: String by project
+    val r2dbcPostgresql: String by project
 
     apply(plugin = "io.spring.dependency-management")
     dependencyManagement {
@@ -88,6 +90,8 @@ allprojects {
             dependency("io.grpc:grpc-netty:$grpc")
             dependency("io.grpc:grpc-protobuf:$grpc")
             dependency("io.grpc:grpc-stub:$grpc")
+            dependency("com.github.tomakehurst:wiremock-standalone:$wiremock")
+            dependency("io.r2dbc:r2dbc-postgresql:$r2dbcPostgresql")
 
         }
     }
