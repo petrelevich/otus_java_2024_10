@@ -52,14 +52,16 @@ public class MessageController {
             return;
         }
         var roomId = parseRoomId(simpDestination);
-        logger.info("subscription for:{}, roomId:{}", simpDestination, roomId);
-        /*
-        /user/3c3416b8-9b24-4c75-b38f-7c96953381d1/topic/response.1
-         */
 
+        var principal = event.getUser();
+        if (principal == null) {
+            return;
+        }
+        logger.info("subscription for:{}, roomId:{}, user:{}", simpDestination, roomId, principal.getName());
+        // /user/f6532733-51db-4d0e-bd00-1267dddc7b21/topic/response.1
         getMessagesByRoomId(roomId)
                 .doOnError(ex -> logger.error("getting messages for roomId:{} failed", roomId, ex))
-                .subscribe(message -> template.convertAndSend(simpDestination, message));
+                .subscribe(message -> template.convertAndSendToUser(principal.getName(), simpDestination, message));
     }
 
     private long parseRoomId(String simpDestination) {
