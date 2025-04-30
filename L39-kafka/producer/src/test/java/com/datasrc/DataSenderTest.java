@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 
 class DataSenderTest {
     @BeforeAll
-    public static void init() throws ExecutionException, InterruptedException, TimeoutException {
+    static void init() throws ExecutionException, InterruptedException, TimeoutException {
         KafkaBase.start(List.of(new NewTopic(MyProducer.TOPIC_NAME, 1, (short) 1)));
     }
 

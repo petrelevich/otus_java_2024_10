@@ -35,7 +35,7 @@ class StringValueConsumerTest {
     private static final Logger log = LoggerFactory.getLogger(StringValueConsumerTest.class);
 
     @BeforeAll
-    public static void init() throws ExecutionException, InterruptedException, TimeoutException {
+    static void init() throws ExecutionException, InterruptedException, TimeoutException {
         KafkaBase.start(List.of(new NewTopic(TOPIC_NAME, 1, (short) 1)));
     }
 
